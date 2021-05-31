@@ -190,8 +190,10 @@
 		28F363A226655112003791A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WL;
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = "Wii Lin";
 				TargetAttributes = {
 					28F363A926655112003791A0 = {
 						CreatedOnToolsVersion = 12.5;
