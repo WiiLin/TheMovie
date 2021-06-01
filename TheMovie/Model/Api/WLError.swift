@@ -33,7 +33,7 @@ enum WLError: Error {
             return "\(error.localizedDescription)\n\(error.userInfo)"
         }
     }
-
+    
     static func serverError(errorObject: [String: Any]) -> WLError {
         if let code = errorObject["status_code"] as? Int,
             let msg = errorObject["status_message"] as? String {
@@ -41,11 +41,11 @@ enum WLError: Error {
         }
         return .serverErrorParseFailedError
     }
-
+    
     static func nsError(error: NSError) -> WLError {
         return .custom(error.localizedDescription)
     }
-
+    
     var code: Int {
         switch self {
         case let .serverError(_, code):
@@ -54,7 +54,7 @@ enum WLError: Error {
             return 0
         }
     }
-
+    
     func nsError(code: Int) -> NSError {
         return NSError(domain: "", code: code, userInfo: ["code": "\(code)", "msg": description])
     }
@@ -68,7 +68,7 @@ extension NSError {
             return false
         }
     }
-
+    
     public var isInternetError: Bool {
         if NSURLErrorNotConnectedToInternet == code ||
             NSURLErrorTimedOut == code {

@@ -27,17 +27,18 @@ struct WLMovieListApi: WLApi, Encodable {
             }
         }
     }
+    
     typealias ApiResponse = Response
     struct Response: Decodable {
         let results: [WLMovie]
     }
-
+    
     var path: String { return WLApiPath.movieList.path }
     var method: HTTPMethod { return .get }
     var headers: HTTPHeaders? { return nil }
     var encoding: ParameterEncoding { return JSONEncoding.default }
     var request: Encodable? { return self }
-
+    
     let apiKey: String
     let primaryReleaseDatelte: String
     let sortBy: Sort

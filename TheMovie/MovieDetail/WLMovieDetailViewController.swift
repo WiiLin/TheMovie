@@ -6,36 +6,37 @@
 //  Copyright © 2021 Wii Lin. All rights reserved.
 //
 
-import UIKit
 import Kingfisher
 import SafariServices
+import UIKit
 class WLMovieDetailViewController: UIViewController {
+    // MARK: - IBOutlet
     
-    //MARK: - IBOutlet
     @IBOutlet private var posterImageView: UIImageView!
     @IBOutlet private var backdropImageView: UIImageView!
     @IBOutlet private var contentView: UIView!
-
+    
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var overviewLabel: UILabel!
     @IBOutlet private var languageLabel: UILabel!
     @IBOutlet private var genreLabel: UILabel!
     @IBOutlet private var runTimeLabel: UILabel!
-
-    //MARK: - Properties
+    
+    // MARK: - Properties
+    
     let detail: WLMovieDetail
     let movie: WLMovie
     
     // MARK: - Init
     
-    class func controller(movie: WLMovie,detail: WLMovieDetail) -> WLMovieDetailViewController {
-        let vc: WLMovieDetailViewController = WLMovieDetailViewController.init(movie: movie, detail: detail)
+    class func controller(movie: WLMovie, detail: WLMovieDetail) -> WLMovieDetailViewController {
+        let vc: WLMovieDetailViewController = WLMovieDetailViewController(movie: movie, detail: detail)
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         return vc
     }
     
-    init(movie:WLMovie, detail: WLMovieDetail) {
+    init(movie: WLMovie, detail: WLMovieDetail) {
         self.movie = movie
         self.detail = detail
         super.init(nibName: nil, bundle: nil)
@@ -46,42 +47,44 @@ class WLMovieDetailViewController: UIViewController {
     }
     
     // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureBaseUI(movie: movie)
         configureDetailUI(movieDetail: detail)
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         posterImageView.kf.cancelDownloadTask()
         backdropImageView.kf.cancelDownloadTask()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
 
-//MARK: - Private Method
+// MARK: - Private Method
+
 private extension WLMovieDetailViewController {
     private func configureBaseUI(movie: WLMovie) {
         titleLabel.text = movie.title
         if let posterPath = movie.posterPath {
             posterImageView.kf.setImage(with: WLMovieImage(imagePath: posterPath).url,
-                                       options: [.transition(ImageTransition.fade(0.3)), .forceTransition])
+                                        options: [.transition(ImageTransition.fade(0.3)), .forceTransition])
         } else {
             posterImageView.image = nil
         }
         if let backdropPath = movie.backdropPath {
             backdropImageView.kf.setImage(with: WLMovieImage(imagePath: backdropPath).url,
-                                       options: [.transition(ImageTransition.fade(0.3)), .forceTransition])
+                                          options: [.transition(ImageTransition.fade(0.3)), .forceTransition])
         } else {
             backdropImageView.image = nil
         }
     }
-
+    
     private func configureDetailUI(movieDetail: WLMovieDetail) {
         genreLabel.text = movieDetail.displayGenres
         languageLabel.text = movieDetail.displaySpokenLanguages
@@ -94,16 +97,16 @@ private extension WLMovieDetailViewController {
     }
 }
 
-//MARK: - Private Actions
+// MARK: - Private Actions
+
 private extension WLMovieDetailViewController {
     @IBAction func onClickCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func onClickMore(_ sender: Any) {
         guard let url = URL(string: "https://www.themoviedb.org/movie/\(movie.id)") else { return }
         let vc = SFSafariViewController(url: url, configuration: SFSafariViewController.Configuration())
         present(vc, animated: true)
-       
     }
 }

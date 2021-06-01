@@ -8,8 +8,7 @@
 import Foundation
 
 class WLApiCenter: WLApiBase, WLRequestProtocol {
-
-    func discoverMovies(page: UInt,sort: WLMovieListApi.Sort, completionHandler: @escaping (Result<WLMovieListApi.ApiResponse, WLError>) -> Void) {
+    func discoverMovies(page: UInt, sort: WLMovieListApi.Sort, completionHandler: @escaping (Result<WLMovieListApi.ApiResponse, WLError>) -> Void) {
         let api = WLMovieListApi(apiKey: apiKey,
                                  primaryReleaseDatelte: Date().string(dateFormat: "YYYY-MM-dd"),
                                  sortBy: sort,
@@ -26,5 +25,3 @@ class WLApiCenter: WLApiBase, WLRequestProtocol {
                 completionHandler: completionHandler)
     }
 }
-
-

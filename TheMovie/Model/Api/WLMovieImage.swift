@@ -14,8 +14,8 @@ struct WLMovieImage {
         baseURLComponents.path = path
         return baseURLComponents.url
     }
+    
     var path: String { return WLApiPath.movieImage.path + imagePath }
-
-
+    
     let imagePath: String
 }

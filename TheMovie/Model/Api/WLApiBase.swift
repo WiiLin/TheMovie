@@ -10,8 +10,8 @@ import Foundation
 
 public class WLApiBase: NSObject {
     // MARK: - Properties
-
-    let apiKey: String =  "328c283cd27bd1877d9080ccb1604c91"
+    
+    let apiKey: String = "328c283cd27bd1877d9080ccb1604c91"
     private let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -29,7 +29,7 @@ public class WLApiBase: NSObject {
         var urlComponents: URLComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
         return urlComponents
     }()
-
+    
     private let sessionManager: Session = {
         let session = Session.default
         session.session.configuration.timeoutIntervalForRequest = 60
@@ -48,7 +48,7 @@ extension WLApiBase {
             completionHandler(.failure(.urlCreateError))
             return
         }
-
+        
         let finalParameters: Parameters? = {
             if let requestType = api.request, let parameters = requestType.parameters, !parameters.isEmpty {
                 return parameters
@@ -115,20 +115,20 @@ private extension WLApiBase {
                 }
             }
     }
-
+    
     func printResponse(response: AFDataResponse<Data?>, parameters: Parameters?, method: HTTPMethod) {
         print("🤟🏻🤟🏻🤟🏻🤟🏻🤟🏻🤟🏻")
         print("✈️ \(response.request?.url?.absoluteString ?? "")")
         print("⚙️ \(method.rawValue)")
         let allHTTPHeaderFields = response.request?.allHTTPHeaderFields ?? [:]
         print("📇 \(allHTTPHeaderFields)")
-
+        
         let parameters = parameters ?? [:]
         print("🎒 \(parameters)")
-
+        
         let statusCode = response.response?.statusCode ?? -1
         print("🚥 \(statusCode)")
-
+        
         if let data = response.data {
             print("🎁 \(String(decoding: data, as: UTF8.self))")
         }
@@ -142,7 +142,7 @@ extension WLApiBase: RequestInterceptor {
     public func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         completion(.success(urlRequest))
     }
-
+    
     public func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         completion(.doNotRetryWithError(error))
     }

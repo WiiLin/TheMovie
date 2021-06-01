@@ -17,19 +17,22 @@ class WLMainViewModel {
     init(apiCenter: WLRequestProtocol) {
         self.apiCenter = apiCenter
     }
-
+    
     // MARK: - Properties
+    
     private let apiCenter: WLRequestProtocol
-   
+    
     private(set) var page: UInt = 0
     private(set) var dataSource: [WLMovie] = []
     
     @Observable var sort: WLMovieListApi.Sort = .releaseDate
     @Observable var isLoading: Bool = false
     @Observable var errorMessage: String = ""
-
+    
     // MARK: - Interface
-    weak var delegate: TMainViewModelDelegate? 
+    
+    weak var delegate: TMainViewModelDelegate?
+    
     func needLoadMore(indexPath: IndexPath) -> Bool {
         if indexPath.row == dataSource.count - 1 {
             return true
@@ -37,7 +40,7 @@ class WLMainViewModel {
             return false
         }
     }
-
+    
     func loadNextPageData() {
         guard isLoading == false else { return }
         isLoading = true
@@ -77,14 +80,13 @@ class WLMainViewModel {
             }
         }
     }
-
 }
 
 // MARK: - Private
 
 private extension WLMainViewModel {
-    func loadData(page: UInt,completionHandler:(()->())?) {
-        apiCenter.discoverMovies(page: page, sort: sort) {  [weak self] result in
+    func loadData(page: UInt, completionHandler: (() -> Void)?) {
+        apiCenter.discoverMovies(page: page, sort: sort) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(response):
@@ -107,6 +109,5 @@ private extension WLMainViewModel {
             }
             completionHandler?()
         }
-        
     }
 }

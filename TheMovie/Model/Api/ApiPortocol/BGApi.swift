@@ -15,4 +15,3 @@ protocol WLApi {
     var method: HTTPMethod { get }
     var headers: HTTPHeaders? { get }
 }
-

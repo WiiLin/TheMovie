@@ -6,21 +6,25 @@
 //  Copyright © 2021 Wii Lin. All rights reserved.
 //
 
-import UIKit
 import PKHUD
-class WLMovieListViewController: UIViewController,AlertPresentable {
+import UIKit
+class WLMovieListViewController: UIViewController, AlertPresentable {
+    // MARK: - IBOutlet
+    
     @IBOutlet private var tableView: UITableView!
+    
+    // MARK: - Properties
+    
     private var refreshControl: UIRefreshControl!
     private let viewModel: WLMainViewModel = WLMainViewModel(apiCenter: WLApiCenter())
-
+    
     // MARK: - Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
         initBinding()
     }
-
 }
 
 // MARK: - Private Method
@@ -66,10 +70,10 @@ private extension WLMovieListViewController {
 // MARK: - Private Action
 
 private extension WLMovieListViewController {
-    
     @objc private func handleRefresh(_ refreshControl: UIRefreshControl) {
         viewModel.refreshData()
     }
+    
     @objc func onClickSort() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let source = WLMovieListApi.Sort.allCases
@@ -80,7 +84,7 @@ private extension WLMovieListViewController {
             }
             actionSheet.addAction(action)
         }
-        actionSheet.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(actionSheet, animated: true, completion: nil)
     }
 }
@@ -93,11 +97,10 @@ extension WLMovieListViewController: UITableViewDelegate {
             viewModel.loadNextPageData()
         }
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.showMovieDetail(indexPath: indexPath, vc: self)
     }
-    
 }
 
 // MARK: - TableView Delegate
@@ -106,7 +109,7 @@ extension WLMovieListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dataSource.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(WLMovieCell.self)", for: indexPath) as! WLMovieCell
         cell.configure(movie: viewModel.dataSource[indexPath.row])
@@ -120,6 +123,7 @@ extension WLMovieListViewController: TMainViewModelDelegate {
     func reloadCompleted() {
         tableView.reloadData()
     }
+    
     func loadMoreCompleted(indexPaths: [IndexPath]) {
         tableView.beginUpdates()
         tableView.insertRows(at: indexPaths, with: .automatic)

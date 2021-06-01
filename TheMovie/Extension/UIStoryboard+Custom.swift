@@ -12,9 +12,8 @@ extension UIStoryboard {
     enum Storyboard: String {
         case Main
     }
-
+    
     class func storyboard(storyboard: Storyboard, bundle: Bundle? = nil) -> UIStoryboard {
         return UIStoryboard(name: storyboard.rawValue, bundle: bundle)
     }
 }
-
