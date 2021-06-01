@@ -175,6 +175,8 @@
 				283934EC26661CB300FE38C7 /* WLMovieListViewController.swift */,
 				283934FD2666218200FE38C7 /* WLMainViewModel.swift */,
 				2839350C2666480300FE38C7 /* WLMovieListViewController.xib */,
+				283934F626661D4200FE38C7 /* WLMovieCell.swift */,
+				283934F526661D4200FE38C7 /* WLMovieCell.xib */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -182,8 +184,6 @@
 		283934FA26661D5900FE38C7 /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
-				283934F626661D4200FE38C7 /* WLMovieCell.swift */,
-				283934F526661D4200FE38C7 /* WLMovieCell.xib */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
