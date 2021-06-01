@@ -33,7 +33,6 @@
 		28CCAD99266555430091B781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD97266555420091B781 /* LaunchScreen.storyboard */; };
 		28CCAD9A266555430091B781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD98266555420091B781 /* Main.storyboard */; };
 		28F363AE26655112003791A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F363AD26655112003791A0 /* AppDelegate.swift */; };
-		28F363B226655112003791A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F363B126655112003791A0 /* ViewController.swift */; };
 		28F363B726655114003791A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F363B626655114003791A0 /* Assets.xcassets */; };
 		28F363C526655114003791A0 /* TheMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F363C426655114003791A0 /* TheMovieTests.swift */; };
 		28F363D026655114003791A0 /* TheMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F363CF26655114003791A0 /* TheMovieUITests.swift */; };
@@ -81,7 +80,6 @@
 		28CCAD98266555420091B781 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		28F363AA26655112003791A0 /* TheMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F363AD26655112003791A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28F363B126655112003791A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28F363B626655114003791A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28F363BB26655114003791A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28F363C026655114003791A0 /* TheMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,7 +226,6 @@
 				283934E4266605A900FE38C7 /* Extension */,
 				28CCAD97266555420091B781 /* LaunchScreen.storyboard */,
 				28F363AD26655112003791A0 /* AppDelegate.swift */,
-				28F363B126655112003791A0 /* ViewController.swift */,
 				2830F9892665DF2E00275E11 /* Model */,
 				28F363B626655114003791A0 /* Assets.xcassets */,
 				28F363BB26655114003791A0 /* Info.plist */,
@@ -405,7 +402,6 @@
 				2830F9972665DF6D00275E11 /* BGApi.swift in Sources */,
 				2830F9922665DF2E00275E11 /* WLApiBase.swift in Sources */,
 				2830F9992665E01800275E11 /* BGRequestProtocol.swift in Sources */,
-				28F363B226655112003791A0 /* ViewController.swift in Sources */,
 				283935052666237300FE38C7 /* WLObservable.swift in Sources */,
 				283934FC26661E3D00FE38C7 /* WLMovieImage.swift in Sources */,
 				283934EB26661C1C00FE38C7 /* UIColor+Custom.swift in Sources */,
