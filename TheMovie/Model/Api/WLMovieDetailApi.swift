@@ -25,12 +25,10 @@ struct WLMovieDetailApi: WLApi, Encodable {
 
 struct WLMovieDetail: Codable {
     struct WLGenre: Codable {
-        let id: Int
         let name: String
     }
     
     struct WLSpokenLanguage: Codable {
-        let iso6391: String
         let name: String
     }
     
