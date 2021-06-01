@@ -11,10 +11,21 @@ import Alamofire
 struct WLEmpty: Codable {}
 
 struct WLMovieListApi: WLApi, Encodable {
-    enum Sort: String, Encodable {
+    enum Sort: String, Encodable, CaseIterable {
         case releaseDate = "primary_release_date.desc"
         case popularity = "popularity.desc"
         case voteCount = "vote_count.desc"
+        
+        var displayName: String {
+            switch self {
+            case .releaseDate:
+                return "release date"
+            case .popularity:
+                return "popularity"
+            case .voteCount:
+                return "vote count"
+            }
+        }
     }
     typealias ApiResponse = Response
     struct Response: Decodable {
@@ -39,6 +50,6 @@ struct WLMovie: Decodable {
     let popularity: Double
     let backdropPath: String?
     let posterPath: String?
-    let releaseDate: String
+    let releaseDate: String?
     var detail: WLMovieDetail?
 }

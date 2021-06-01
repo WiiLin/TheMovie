@@ -32,7 +32,7 @@ class WLMovieCell: UITableViewCell {
 
     func configure(movie: WLMovie) {
         titleLabel.text = movie.title
-        releaseDateLabel.text = "Release date: " + movie.releaseDate
+        releaseDateLabel.text = "Release date: " + (movie.releaseDate ?? "unknown")
         popularityLabel.text = "Popularity: " + "\(movie.popularity)"
 
         if let poster_path = movie.posterPath {

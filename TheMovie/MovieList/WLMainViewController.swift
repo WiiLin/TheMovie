@@ -30,6 +30,8 @@ private extension WLMainViewController {
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
         tableView.register(UINib(nibName: "\(WLMovieCell.self)", bundle: nil), forCellReuseIdentifier: "\(WLMovieCell.self)")
         setupRefreshControl()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort", style: .plain, target: self, action: #selector(onClickSort))
     }
     
     func setupRefreshControl() {
@@ -53,6 +55,10 @@ private extension WLMainViewController {
                 HUD.hide()
             }
         }
+        viewModel.$sort(bind: self, fireNow: true) { weakSelf, sort in
+            weakSelf.navigationItem.prompt = "Sort by \(sort.displayName)"
+            weakSelf.viewModel.refreshData()
+        }
     }
 }
 
@@ -62,6 +68,19 @@ private extension WLMainViewController {
     
     @objc private func handleRefresh(_ refreshControl: UIRefreshControl) {
         viewModel.refreshData()
+    }
+    @objc func onClickSort() {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let source = WLMovieListApi.Sort.allCases
+        for (index, sortBy) in source.enumerated() {
+            let action = UIAlertAction(title: sortBy.displayName, style: .default) { [weak self] action in
+                guard let self = self else { return }
+                self.viewModel.sort = source[index]
+            }
+            actionSheet.addAction(action)
+        }
+        actionSheet.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        present(actionSheet, animated: true, completion: nil)
     }
 }
 

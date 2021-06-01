@@ -22,17 +22,14 @@ class WLMainViewModel {
     private let apiCenter: WLRequestProtocol
    
     private(set) var page: UInt = 0
-    private(set) var sort: WLMovieListApi.Sort = .releaseDate
     private(set) var dataSource: [WLMovie] = []
+    
+    @Observable var sort: WLMovieListApi.Sort = .releaseDate
     @Observable var isLoading: Bool = false
     @Observable var errorMessage: String = ""
 
     // MARK: - Interface
-    weak var delegate: TMainViewModelDelegate? {
-        didSet {
-            refreshData()
-        }
-    }
+    weak var delegate: TMainViewModelDelegate? 
     func needLoadMore(indexPath: IndexPath) -> Bool {
         if indexPath.row == dataSource.count - 1 {
             return true
@@ -69,7 +66,7 @@ private extension WLMainViewModel {
             guard let self = self else { return }
             switch result {
             case let .success(response):
-                if page == 0 {
+                if page == 1 {
                     self.dataSource.removeAll()
                     self.dataSource = response.results
                     self.delegate?.reloadCompleted()

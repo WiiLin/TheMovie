@@ -11,12 +11,12 @@ import UIKit
 class WLNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.prefersLargeTitles = true
         navigationBar.titleTextAttributes = [.foregroundColor: UIColor.lightGreen!]
         navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.lightGreen!]
         navigationBar.barTintColor = .backgroundBlack
         navigationBar.tintColor = .lightGreen
-        navigationBar.isTranslucent = false
+        navigationBar.barStyle = .black
+        navigationBar.isTranslucent = true
     }
 
     /*
