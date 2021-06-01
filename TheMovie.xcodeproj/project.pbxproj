@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		2830F9852665DEC000275E11 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2830F9842665DEC000275E11 /* Alamofire */; };
 		2830F9882665DEE700275E11 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2830F9872665DEE700275E11 /* Kingfisher */; };
+		2830F9912665DF2E00275E11 /* WLApiCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F98C2665DF2E00275E11 /* WLApiCenter.swift */; };
+		2830F9922665DF2E00275E11 /* WLApiBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F98D2665DF2E00275E11 /* WLApiBase.swift */; };
+		2830F9932665DF2E00275E11 /* WLApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F98E2665DF2E00275E11 /* WLApiPath.swift */; };
+		2830F9942665DF2E00275E11 /* WLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F98F2665DF2E00275E11 /* WLError.swift */; };
+		2830F9972665DF6D00275E11 /* BGApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F9962665DF6D00275E11 /* BGApi.swift */; };
+		2830F9992665E01800275E11 /* BGRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F9982665E01800275E11 /* BGRequestProtocol.swift */; };
+		2830F99C2665E60400275E11 /* WLMovieListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F99B2665E60400275E11 /* WLMovieListApi.swift */; };
+		2830F99F2665E74F00275E11 /* WLMovieDetailApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F99E2665E74F00275E11 /* WLMovieDetailApi.swift */; };
+		283934E6266605BD00FE38C7 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283934E5266605BD00FE38C7 /* Date+String.swift */; };
 		28CCAD962665526A0091B781 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD952665526A0091B781 /* Colors.xcassets */; };
 		28CCAD99266555430091B781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD97266555420091B781 /* LaunchScreen.storyboard */; };
 		28CCAD9A266555430091B781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD98266555420091B781 /* Main.storyboard */; };
@@ -37,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2830F98C2665DF2E00275E11 /* WLApiCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLApiCenter.swift; sourceTree = "<group>"; };
+		2830F98D2665DF2E00275E11 /* WLApiBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLApiBase.swift; sourceTree = "<group>"; };
+		2830F98E2665DF2E00275E11 /* WLApiPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLApiPath.swift; sourceTree = "<group>"; };
+		2830F98F2665DF2E00275E11 /* WLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLError.swift; sourceTree = "<group>"; };
+		2830F9962665DF6D00275E11 /* BGApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApi.swift; sourceTree = "<group>"; };
+		2830F9982665E01800275E11 /* BGRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGRequestProtocol.swift; sourceTree = "<group>"; };
+		2830F99B2665E60400275E11 /* WLMovieListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMovieListApi.swift; sourceTree = "<group>"; };
+		2830F99E2665E74F00275E11 /* WLMovieDetailApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMovieDetailApi.swift; sourceTree = "<group>"; };
+		283934E5266605BD00FE38C7 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		28CCAD952665526A0091B781 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		28CCAD97266555420091B781 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28CCAD98266555420091B781 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +98,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2830F9892665DF2E00275E11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2830F98A2665DF2E00275E11 /* Api */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2830F98A2665DF2E00275E11 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				2830F9952665DF5900275E11 /* ApiPortocol */,
+				2830F98C2665DF2E00275E11 /* WLApiCenter.swift */,
+				2830F98D2665DF2E00275E11 /* WLApiBase.swift */,
+				2830F98E2665DF2E00275E11 /* WLApiPath.swift */,
+				2830F98F2665DF2E00275E11 /* WLError.swift */,
+				2830F99B2665E60400275E11 /* WLMovieListApi.swift */,
+				2830F99E2665E74F00275E11 /* WLMovieDetailApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		2830F9952665DF5900275E11 /* ApiPortocol */ = {
+			isa = PBXGroup;
+			children = (
+				2830F9962665DF6D00275E11 /* BGApi.swift */,
+				2830F9982665E01800275E11 /* BGRequestProtocol.swift */,
+			);
+			path = ApiPortocol;
+			sourceTree = "<group>";
+		};
+		283934E4266605A900FE38C7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				283934E5266605BD00FE38C7 /* Date+String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		28F363A126655112003791A0 = {
 			isa = PBXGroup;
 			children = (
@@ -103,10 +160,12 @@
 		28F363AC26655112003791A0 /* TheMovie */ = {
 			isa = PBXGroup;
 			children = (
+				283934E4266605A900FE38C7 /* Extension */,
 				28CCAD97266555420091B781 /* LaunchScreen.storyboard */,
 				28CCAD98266555420091B781 /* Main.storyboard */,
 				28F363AD26655112003791A0 /* AppDelegate.swift */,
 				28F363B126655112003791A0 /* ViewController.swift */,
+				2830F9892665DF2E00275E11 /* Model */,
 				28F363B626655114003791A0 /* Assets.xcassets */,
 				28F363BB26655114003791A0 /* Info.plist */,
 				28CCAD952665526A0091B781 /* Colors.xcassets */,
@@ -273,7 +332,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2830F99C2665E60400275E11 /* WLMovieListApi.swift in Sources */,
+				2830F9912665DF2E00275E11 /* WLApiCenter.swift in Sources */,
+				2830F9972665DF6D00275E11 /* BGApi.swift in Sources */,
+				2830F9922665DF2E00275E11 /* WLApiBase.swift in Sources */,
+				2830F9992665E01800275E11 /* BGRequestProtocol.swift in Sources */,
 				28F363B226655112003791A0 /* ViewController.swift in Sources */,
+				2830F99F2665E74F00275E11 /* WLMovieDetailApi.swift in Sources */,
+				283934E6266605BD00FE38C7 /* Date+String.swift in Sources */,
+				2830F9942665DF2E00275E11 /* WLError.swift in Sources */,
+				2830F9932665DF2E00275E11 /* WLApiPath.swift in Sources */,
 				28F363AE26655112003791A0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
