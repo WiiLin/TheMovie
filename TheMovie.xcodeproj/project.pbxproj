@@ -18,6 +18,17 @@
 		2830F99C2665E60400275E11 /* WLMovieListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F99B2665E60400275E11 /* WLMovieListApi.swift */; };
 		2830F99F2665E74F00275E11 /* WLMovieDetailApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F99E2665E74F00275E11 /* WLMovieDetailApi.swift */; };
 		283934E6266605BD00FE38C7 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283934E5266605BD00FE38C7 /* Date+String.swift */; };
+		283934E926661BE500FE38C7 /* WLNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283934E826661BE500FE38C7 /* WLNavigationController.swift */; };
+		283934EB26661C1C00FE38C7 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283934EA26661C1C00FE38C7 /* UIColor+Custom.swift */; };
+		283934ED26661CB300FE38C7 /* WLMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283934EC26661CB300FE38C7 /* WLMainViewController.swift */; };
+		283934F726661D4200FE38C7 /* WLMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283934F526661D4200FE38C7 /* WLMovieCell.xib */; };
+		283934F826661D4200FE38C7 /* WLMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283934F626661D4200FE38C7 /* WLMovieCell.swift */; };
+		283934FC26661E3D00FE38C7 /* WLMovieImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283934FB26661E3D00FE38C7 /* WLMovieImage.swift */; };
+		283934FE2666218200FE38C7 /* WLMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283934FD2666218200FE38C7 /* WLMainViewModel.swift */; };
+		28393501266621C700FE38C7 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28393500266621C700FE38C7 /* AlertPresentable.swift */; };
+		28393503266622AE00FE38C7 /* UIStoryboard+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28393502266622AE00FE38C7 /* UIStoryboard+Custom.swift */; };
+		283935052666237300FE38C7 /* WLObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283935042666237300FE38C7 /* WLObservable.swift */; };
+		283935082666342100FE38C7 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 283935072666342100FE38C7 /* PKHUD */; };
 		28CCAD962665526A0091B781 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD952665526A0091B781 /* Colors.xcassets */; };
 		28CCAD99266555430091B781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD97266555420091B781 /* LaunchScreen.storyboard */; };
 		28CCAD9A266555430091B781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD98266555420091B781 /* Main.storyboard */; };
@@ -55,6 +66,16 @@
 		2830F99B2665E60400275E11 /* WLMovieListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMovieListApi.swift; sourceTree = "<group>"; };
 		2830F99E2665E74F00275E11 /* WLMovieDetailApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMovieDetailApi.swift; sourceTree = "<group>"; };
 		283934E5266605BD00FE38C7 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		283934E826661BE500FE38C7 /* WLNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLNavigationController.swift; sourceTree = "<group>"; };
+		283934EA26661C1C00FE38C7 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		283934EC26661CB300FE38C7 /* WLMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMainViewController.swift; sourceTree = "<group>"; };
+		283934F526661D4200FE38C7 /* WLMovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLMovieCell.xib; sourceTree = "<group>"; };
+		283934F626661D4200FE38C7 /* WLMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLMovieCell.swift; sourceTree = "<group>"; };
+		283934FB26661E3D00FE38C7 /* WLMovieImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMovieImage.swift; sourceTree = "<group>"; };
+		283934FD2666218200FE38C7 /* WLMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMainViewModel.swift; sourceTree = "<group>"; };
+		28393500266621C700FE38C7 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		28393502266622AE00FE38C7 /* UIStoryboard+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Custom.swift"; sourceTree = "<group>"; };
+		283935042666237300FE38C7 /* WLObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLObservable.swift; sourceTree = "<group>"; };
 		28CCAD952665526A0091B781 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		28CCAD97266555420091B781 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28CCAD98266555420091B781 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283935082666342100FE38C7 /* PKHUD in Frameworks */,
 				2830F9882665DEE700275E11 /* Kingfisher in Frameworks */,
 				2830F9852665DEC000275E11 /* Alamofire in Frameworks */,
 			);
@@ -101,6 +123,7 @@
 		2830F9892665DF2E00275E11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				283935042666237300FE38C7 /* WLObservable.swift */,
 				2830F98A2665DF2E00275E11 /* Api */,
 			);
 			path = Model;
@@ -116,6 +139,7 @@
 				2830F98F2665DF2E00275E11 /* WLError.swift */,
 				2830F99B2665E60400275E11 /* WLMovieListApi.swift */,
 				2830F99E2665E74F00275E11 /* WLMovieDetailApi.swift */,
+				283934FB26661E3D00FE38C7 /* WLMovieImage.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -133,8 +157,45 @@
 			isa = PBXGroup;
 			children = (
 				283934E5266605BD00FE38C7 /* Date+String.swift */,
+				283934EA26661C1C00FE38C7 /* UIColor+Custom.swift */,
+				28393502266622AE00FE38C7 /* UIStoryboard+Custom.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		283934E726661BBD00FE38C7 /* UICompoments */ = {
+			isa = PBXGroup;
+			children = (
+				283934E826661BE500FE38C7 /* WLNavigationController.swift */,
+			);
+			path = UICompoments;
+			sourceTree = "<group>";
+		};
+		283934F926661D4700FE38C7 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				28CCAD98266555420091B781 /* Main.storyboard */,
+				283934EC26661CB300FE38C7 /* WLMainViewController.swift */,
+				283934FD2666218200FE38C7 /* WLMainViewModel.swift */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
+		283934FA26661D5900FE38C7 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				283934F626661D4200FE38C7 /* WLMovieCell.swift */,
+				283934F526661D4200FE38C7 /* WLMovieCell.xib */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		283934FF266621BE00FE38C7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				28393500266621C700FE38C7 /* AlertPresentable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		28F363A126655112003791A0 = {
@@ -160,9 +221,12 @@
 		28F363AC26655112003791A0 /* TheMovie */ = {
 			isa = PBXGroup;
 			children = (
+				283934FF266621BE00FE38C7 /* Protocol */,
+				283934FA26661D5900FE38C7 /* MovieDetail */,
+				283934F926661D4700FE38C7 /* MovieList */,
+				283934E726661BBD00FE38C7 /* UICompoments */,
 				283934E4266605A900FE38C7 /* Extension */,
 				28CCAD97266555420091B781 /* LaunchScreen.storyboard */,
-				28CCAD98266555420091B781 /* Main.storyboard */,
 				28F363AD26655112003791A0 /* AppDelegate.swift */,
 				28F363B126655112003791A0 /* ViewController.swift */,
 				2830F9892665DF2E00275E11 /* Model */,
@@ -210,6 +274,7 @@
 			packageProductDependencies = (
 				2830F9842665DEC000275E11 /* Alamofire */,
 				2830F9872665DEE700275E11 /* Kingfisher */,
+				283935072666342100FE38C7 /* PKHUD */,
 			);
 			productName = TheMovie;
 			productReference = 28F363AA26655112003791A0 /* TheMovie.app */;
@@ -287,6 +352,7 @@
 			packageReferences = (
 				2830F9832665DEC000275E11 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2830F9862665DEE700275E11 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				283935062666342100FE38C7 /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = 28F363AB26655112003791A0 /* Products */;
 			projectDirPath = "";
@@ -306,6 +372,7 @@
 			files = (
 				28CCAD99266555430091B781 /* LaunchScreen.storyboard in Resources */,
 				28CCAD962665526A0091B781 /* Colors.xcassets in Resources */,
+				283934F726661D4200FE38C7 /* WLMovieCell.xib in Resources */,
 				28F363B726655114003791A0 /* Assets.xcassets in Resources */,
 				28CCAD9A266555430091B781 /* Main.storyboard in Resources */,
 			);
@@ -334,15 +401,24 @@
 			files = (
 				2830F99C2665E60400275E11 /* WLMovieListApi.swift in Sources */,
 				2830F9912665DF2E00275E11 /* WLApiCenter.swift in Sources */,
+				283934ED26661CB300FE38C7 /* WLMainViewController.swift in Sources */,
 				2830F9972665DF6D00275E11 /* BGApi.swift in Sources */,
 				2830F9922665DF2E00275E11 /* WLApiBase.swift in Sources */,
 				2830F9992665E01800275E11 /* BGRequestProtocol.swift in Sources */,
 				28F363B226655112003791A0 /* ViewController.swift in Sources */,
+				283935052666237300FE38C7 /* WLObservable.swift in Sources */,
+				283934FC26661E3D00FE38C7 /* WLMovieImage.swift in Sources */,
+				283934EB26661C1C00FE38C7 /* UIColor+Custom.swift in Sources */,
+				28393503266622AE00FE38C7 /* UIStoryboard+Custom.swift in Sources */,
 				2830F99F2665E74F00275E11 /* WLMovieDetailApi.swift in Sources */,
+				283934FE2666218200FE38C7 /* WLMainViewModel.swift in Sources */,
 				283934E6266605BD00FE38C7 /* Date+String.swift in Sources */,
 				2830F9942665DF2E00275E11 /* WLError.swift in Sources */,
+				28393501266621C700FE38C7 /* AlertPresentable.swift in Sources */,
 				2830F9932665DF2E00275E11 /* WLApiPath.swift in Sources */,
+				283934E926661BE500FE38C7 /* WLNavigationController.swift in Sources */,
 				28F363AE26655112003791A0 /* AppDelegate.swift in Sources */,
+				283934F826661D4200FE38C7 /* WLMovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +752,14 @@
 				minimumVersion = 6.3.0;
 			};
 		};
+		283935062666342100FE38C7 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -688,6 +772,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2830F9862665DEE700275E11 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		283935072666342100FE38C7 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 283935062666342100FE38C7 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

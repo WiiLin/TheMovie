@@ -1,6 +1,6 @@
 //
 //  WLApiCenter.swift
-//  The Movie
+//  TheMovie
 //
 // Created by Wii Lin on 2021/6/1.
 //
@@ -13,7 +13,7 @@ class WLApiCenter: WLApiBase, WLRequestProtocol {
         let api = WLMovieListApi(apiKey: apiKey,
                                  primaryReleaseDatelte: Date().string(dateFormat: "YYYY-MM-dd"),
                                  sortBy: sort,
-                                 page: 1)
+                                 page: page)
         request(api: api,
                 responseType: WLMovieListApi.ApiResponse.self,
                 completionHandler: completionHandler)

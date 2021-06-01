@@ -1,6 +1,6 @@
 //
 //  WLApiBase.swift
-//  The Movie
+//  TheMovie
 //
 // Created by Wii Lin on 2021/6/1.
 //
@@ -17,6 +17,13 @@ public class WLApiBase: NSObject {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder
     }()
+    
+    static let imageBaseURLComponents: URLComponents = {
+        let url = URL(string: "https://image.tmdb.org/")!
+        var urlComponents: URLComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
+        return urlComponents
+    }()
+    
     private var baseURLComponents: URLComponents = {
         let url = URL(string: "https://api.themoviedb.org/")!
         var urlComponents: URLComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
