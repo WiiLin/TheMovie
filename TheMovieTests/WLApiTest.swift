@@ -28,6 +28,13 @@ class WLApiTest: XCTestCase {
         XCTAssertEqual(WLApiPath.movieDetail.version, apiVersion)
     }
     
+    func testSort() throws {
+        XCTAssertEqual(WLMovieListApi.Sort.releaseDate.rawValue, "primary_release_date.desc")
+        XCTAssertEqual(WLMovieListApi.Sort.popularity.rawValue, "popularity.desc")
+        XCTAssertEqual(WLMovieListApi.Sort.voteCount.rawValue, "vote_count.desc")
+        
+    }
+    
     func testApi() throws {
         let testApiKey = "testApiKey"
         let testPrimaryReleaseDatelte = "2020-06-01"
