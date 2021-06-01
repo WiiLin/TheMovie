@@ -95,9 +95,9 @@ extension WLMovieListViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let movieDetailVC = WLMovieDetailViewController.movieDetailViewController(movie: viewModel.dataSource[indexPath.row])
-//        present(movieDetailVC, animated: true, completion: nil)
+        viewModel.showMovieDetail(indexPath: indexPath, vc: self)
     }
+    
 }
 
 // MARK: - TableView Delegate

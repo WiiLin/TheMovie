@@ -30,6 +30,8 @@
 		283935052666237300FE38C7 /* WLObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283935042666237300FE38C7 /* WLObservable.swift */; };
 		283935082666342100FE38C7 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 283935072666342100FE38C7 /* PKHUD */; };
 		2839350E2666480300FE38C7 /* WLMovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2839350C2666480300FE38C7 /* WLMovieListViewController.xib */; };
+		28393511266649F700FE38C7 /* WLMovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2839350F266649F700FE38C7 /* WLMovieDetailViewController.swift */; };
+		28393512266649F700FE38C7 /* WLMovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28393510266649F700FE38C7 /* WLMovieDetailViewController.xib */; };
 		28CCAD962665526A0091B781 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD952665526A0091B781 /* Colors.xcassets */; };
 		28CCAD99266555430091B781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CCAD97266555420091B781 /* LaunchScreen.storyboard */; };
 		28F363AE26655112003791A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F363AD26655112003791A0 /* AppDelegate.swift */; };
@@ -76,6 +78,8 @@
 		28393502266622AE00FE38C7 /* UIStoryboard+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Custom.swift"; sourceTree = "<group>"; };
 		283935042666237300FE38C7 /* WLObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLObservable.swift; sourceTree = "<group>"; };
 		2839350C2666480300FE38C7 /* WLMovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLMovieListViewController.xib; sourceTree = "<group>"; };
+		2839350F266649F700FE38C7 /* WLMovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMovieDetailViewController.swift; sourceTree = "<group>"; };
+		28393510266649F700FE38C7 /* WLMovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLMovieDetailViewController.xib; sourceTree = "<group>"; };
 		28CCAD952665526A0091B781 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		28CCAD97266555420091B781 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28F363AA26655112003791A0 /* TheMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +188,8 @@
 		283934FA26661D5900FE38C7 /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
+				2839350F266649F700FE38C7 /* WLMovieDetailViewController.swift */,
+				28393510266649F700FE38C7 /* WLMovieDetailViewController.xib */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				28CCAD962665526A0091B781 /* Colors.xcassets in Resources */,
 				283934F726661D4200FE38C7 /* WLMovieCell.xib in Resources */,
 				28F363B726655114003791A0 /* Assets.xcassets in Resources */,
+				28393512266649F700FE38C7 /* WLMovieDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +410,7 @@
 				2830F9922665DF2E00275E11 /* WLApiBase.swift in Sources */,
 				2830F9992665E01800275E11 /* BGRequestProtocol.swift in Sources */,
 				283935052666237300FE38C7 /* WLObservable.swift in Sources */,
+				28393511266649F700FE38C7 /* WLMovieDetailViewController.swift in Sources */,
 				283934FC26661E3D00FE38C7 /* WLMovieImage.swift in Sources */,
 				283934EB26661C1C00FE38C7 /* UIColor+Custom.swift in Sources */,
 				28393503266622AE00FE38C7 /* UIStoryboard+Custom.swift in Sources */,

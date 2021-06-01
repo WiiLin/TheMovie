@@ -6,7 +6,7 @@
 //  Copyright © 2021 Wii Lin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol TMainViewModelDelegate: AnyObject {
     func reloadCompleted()
@@ -54,6 +54,28 @@ class WLMainViewModel {
     
     func resetPage() {
         page = 0
+    }
+    
+    func showMovieDetail(indexPath: IndexPath, vc: UIViewController) {
+        guard isLoading == false else { return }
+        let movie = dataSource[indexPath.row]
+        if let detail = dataSource[indexPath.row].detail {
+            let detailVC = WLMovieDetailViewController.controller(movie: movie, detail: detail)
+            vc.present(detailVC, animated: true, completion: nil)
+        } else {
+            isLoading = true
+            apiCenter.getMovieDetail(id: movie.id) { [weak self] result in
+                guard let self = self else { return }
+                self.isLoading = false
+                switch result {
+                case let .success(detail):
+                    self.dataSource[indexPath.row].detail = detail
+                    self.showMovieDetail(indexPath: indexPath, vc: vc)
+                case let .failure(error):
+                    self.errorMessage = error.description
+                }
+            }
+        }
     }
 
 }
