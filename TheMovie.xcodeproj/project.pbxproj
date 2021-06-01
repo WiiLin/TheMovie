@@ -117,9 +117,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				283935082666342100FE38C7 /* PKHUD in Frameworks */,
-				2830F9882665DEE700275E11 /* Kingfisher in Frameworks */,
 				2830F9852665DEC000275E11 /* Alamofire in Frameworks */,
+				2830F9882665DEE700275E11 /* Kingfisher in Frameworks */,
+				283935082666342100FE38C7 /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				280827F126668BC100D3B9BA /* Json */,
-				280827F326668BDF00D3B9BA /* WLFakeApiTest.swift */,
 				280827F626668CAD00D3B9BA /* WLFakeApiCenter.swift */,
+				280827F326668BDF00D3B9BA /* WLFakeApiTest.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -162,8 +162,8 @@
 		2830F9892665DF2E00275E11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				283935042666237300FE38C7 /* WLObservable.swift */,
 				2830F98A2665DF2E00275E11 /* Api */,
+				283935042666237300FE38C7 /* WLObservable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,12 +172,12 @@
 			isa = PBXGroup;
 			children = (
 				2830F9952665DF5900275E11 /* ApiPortocol */,
-				2830F98C2665DF2E00275E11 /* WLApiCenter.swift */,
 				2830F98D2665DF2E00275E11 /* WLApiBase.swift */,
+				2830F98C2665DF2E00275E11 /* WLApiCenter.swift */,
 				2830F98E2665DF2E00275E11 /* WLApiPath.swift */,
 				2830F98F2665DF2E00275E11 /* WLError.swift */,
-				2830F99B2665E60400275E11 /* WLMovieListApi.swift */,
 				2830F99E2665E74F00275E11 /* WLMovieDetailApi.swift */,
+				2830F99B2665E60400275E11 /* WLMovieListApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -194,12 +194,12 @@
 		283934E4266605A900FE38C7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				280827F826668CEF00D3B9BA /* Bundle+Data.swift */,
 				283934E5266605BD00FE38C7 /* Date+String.swift */,
 				283934EA26661C1C00FE38C7 /* UIColor+Custom.swift */,
 				28393502266622AE00FE38C7 /* UIStoryboard+Custom.swift */,
-				280827E926667CCB00D3B9BA /* URL+Custom.swift */,
-				280827F826668CEF00D3B9BA /* Bundle+Data.swift */,
 				2808280226669ED600D3B9BA /* UITableView+Scroll.swift */,
+				280827E926667CCB00D3B9BA /* URL+Custom.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -215,11 +215,11 @@
 		283934F926661D4700FE38C7 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
-				283934EC26661CB300FE38C7 /* WLMovieListViewController.swift */,
-				283934FD2666218200FE38C7 /* WLMovieListViewModel.swift */,
-				2839350C2666480300FE38C7 /* WLMovieListViewController.xib */,
 				283934F626661D4200FE38C7 /* WLMovieCell.swift */,
 				283934F526661D4200FE38C7 /* WLMovieCell.xib */,
+				283934EC26661CB300FE38C7 /* WLMovieListViewController.swift */,
+				2839350C2666480300FE38C7 /* WLMovieListViewController.xib */,
+				283934FD2666218200FE38C7 /* WLMovieListViewModel.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -264,17 +264,17 @@
 		28F363AC26655112003791A0 /* TheMovie */ = {
 			isa = PBXGroup;
 			children = (
-				283934FF266621BE00FE38C7 /* Protocol */,
+				283934E4266605A900FE38C7 /* Extension */,
+				2830F9892665DF2E00275E11 /* Model */,
 				283934FA26661D5900FE38C7 /* MovieDetail */,
 				283934F926661D4700FE38C7 /* MovieList */,
+				283934FF266621BE00FE38C7 /* Protocol */,
 				283934E726661BBD00FE38C7 /* UICompoments */,
-				283934E4266605A900FE38C7 /* Extension */,
-				28CCAD97266555420091B781 /* LaunchScreen.storyboard */,
 				28F363AD26655112003791A0 /* AppDelegate.swift */,
-				2830F9892665DF2E00275E11 /* Model */,
 				28F363B626655114003791A0 /* Assets.xcassets */,
-				28F363BB26655114003791A0 /* Info.plist */,
 				28CCAD952665526A0091B781 /* Colors.xcassets */,
+				28F363BB26655114003791A0 /* Info.plist */,
+				28CCAD97266555420091B781 /* LaunchScreen.storyboard */,
 			);
 			path = TheMovie;
 			sourceTree = "<group>";
@@ -284,9 +284,9 @@
 			children = (
 				280827F526668C9E00D3B9BA /* Api */,
 				28F363C626655114003791A0 /* Info.plist */,
-				280827EB2666845400D3B9BA /* WLURLTest.swift */,
 				280827EF2666891300D3B9BA /* WLApiTest.swift */,
 				280827FE266690D100D3B9BA /* WLColorTest.swift */,
+				280827EB2666845400D3B9BA /* WLURLTest.swift */,
 				280828002666942600D3B9BA /* WLViewModelTest.swift */,
 			);
 			path = TheMovieTests;
@@ -295,8 +295,8 @@
 		28F363CE26655114003791A0 /* TheMovieUITests */ = {
 			isa = PBXGroup;
 			children = (
-				28F363CF26655114003791A0 /* TheMovieUITests.swift */,
 				28F363D126655114003791A0 /* Info.plist */,
+				28F363CF26655114003791A0 /* TheMovieUITests.swift */,
 			);
 			path = TheMovieUITests;
 			sourceTree = "<group>";
@@ -416,12 +416,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2839350E2666480300FE38C7 /* WLMovieListViewController.xib in Resources */,
-				28CCAD99266555430091B781 /* LaunchScreen.storyboard in Resources */,
-				28CCAD962665526A0091B781 /* Colors.xcassets in Resources */,
-				283934F726661D4200FE38C7 /* WLMovieCell.xib in Resources */,
 				28F363B726655114003791A0 /* Assets.xcassets in Resources */,
+				28CCAD962665526A0091B781 /* Colors.xcassets in Resources */,
+				28CCAD99266555430091B781 /* LaunchScreen.storyboard in Resources */,
+				283934F726661D4200FE38C7 /* WLMovieCell.xib in Resources */,
 				28393512266649F700FE38C7 /* WLMovieDetailViewController.xib in Resources */,
+				2839350E2666480300FE38C7 /* WLMovieListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,28 +448,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280827EA26667CCB00D3B9BA /* URL+Custom.swift in Sources */,
-				2830F99C2665E60400275E11 /* WLMovieListApi.swift in Sources */,
-				2830F9912665DF2E00275E11 /* WLApiCenter.swift in Sources */,
-				283934ED26661CB300FE38C7 /* WLMovieListViewController.swift in Sources */,
+				28393501266621C700FE38C7 /* AlertPresentable.swift in Sources */,
+				28F363AE26655112003791A0 /* AppDelegate.swift in Sources */,
 				2830F9972665DF6D00275E11 /* BGApi.swift in Sources */,
-				2830F9922665DF2E00275E11 /* WLApiBase.swift in Sources */,
 				2830F9992665E01800275E11 /* BGRequestProtocol.swift in Sources */,
-				283935052666237300FE38C7 /* WLObservable.swift in Sources */,
-				28393511266649F700FE38C7 /* WLMovieDetailViewController.swift in Sources */,
+				280827F926668CEF00D3B9BA /* Bundle+Data.swift in Sources */,
+				283934E6266605BD00FE38C7 /* Date+String.swift in Sources */,
 				283934EB26661C1C00FE38C7 /* UIColor+Custom.swift in Sources */,
 				28393503266622AE00FE38C7 /* UIStoryboard+Custom.swift in Sources */,
-				2830F99F2665E74F00275E11 /* WLMovieDetailApi.swift in Sources */,
-				283934FE2666218200FE38C7 /* WLMovieListViewModel.swift in Sources */,
 				2808280326669ED600D3B9BA /* UITableView+Scroll.swift in Sources */,
-				283934E6266605BD00FE38C7 /* Date+String.swift in Sources */,
-				2830F9942665DF2E00275E11 /* WLError.swift in Sources */,
-				28393501266621C700FE38C7 /* AlertPresentable.swift in Sources */,
+				280827EA26667CCB00D3B9BA /* URL+Custom.swift in Sources */,
+				2830F9922665DF2E00275E11 /* WLApiBase.swift in Sources */,
+				2830F9912665DF2E00275E11 /* WLApiCenter.swift in Sources */,
 				2830F9932665DF2E00275E11 /* WLApiPath.swift in Sources */,
-				280827F926668CEF00D3B9BA /* Bundle+Data.swift in Sources */,
-				283934E926661BE500FE38C7 /* WLNavigationController.swift in Sources */,
-				28F363AE26655112003791A0 /* AppDelegate.swift in Sources */,
+				2830F9942665DF2E00275E11 /* WLError.swift in Sources */,
 				283934F826661D4200FE38C7 /* WLMovieCell.swift in Sources */,
+				2830F99F2665E74F00275E11 /* WLMovieDetailApi.swift in Sources */,
+				28393511266649F700FE38C7 /* WLMovieDetailViewController.swift in Sources */,
+				2830F99C2665E60400275E11 /* WLMovieListApi.swift in Sources */,
+				283934ED26661CB300FE38C7 /* WLMovieListViewController.swift in Sources */,
+				283934FE2666218200FE38C7 /* WLMovieListViewModel.swift in Sources */,
+				283934E926661BE500FE38C7 /* WLNavigationController.swift in Sources */,
+				283935052666237300FE38C7 /* WLObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,11 +477,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280827F426668BDF00D3B9BA /* WLFakeApiTest.swift in Sources */,
+				280827F02666891300D3B9BA /* WLApiTest.swift in Sources */,
 				280827FF266690D100D3B9BA /* WLColorTest.swift in Sources */,
 				280827F726668CAD00D3B9BA /* WLFakeApiCenter.swift in Sources */,
+				280827F426668BDF00D3B9BA /* WLFakeApiTest.swift in Sources */,
 				280827EC2666845400D3B9BA /* WLURLTest.swift in Sources */,
-				280827F02666891300D3B9BA /* WLApiTest.swift in Sources */,
 				280828012666942600D3B9BA /* WLViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
