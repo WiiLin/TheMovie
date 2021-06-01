@@ -56,8 +56,10 @@ private extension WLMovieListViewController {
             if isLoading {
                 HUD.show(.progress, onView: weakSelf.view)
             } else {
-                weakSelf.refreshControl.endRefreshing()
-                HUD.hide()
+                if weakSelf.refreshControl.isRefreshing {
+                    weakSelf.refreshControl.endRefreshing()
+                }
+                HUD.hide(animated: true)
             }
         }
         viewModel.$sort(bind: self, fireNow: true) { weakSelf, sort in
