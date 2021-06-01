@@ -41,8 +41,8 @@ class WLMovieCell: UITableViewCell {
         releaseDateLabel.text = "Release date: " + (movie.releaseDate ?? "unknown")
         popularityLabel.text = "Popularity: " + "\(movie.popularity)"
         
-        if let poster_path = movie.posterPath {
-            posterImageView.kf.setImage(with: WLMovieImage(imagePath: poster_path).url,
+        if let posterPath = movie.posterPath, let url = URL.movieImage(path: posterPath) {
+            posterImageView.kf.setImage(with: url,
                                         options: [.transition(ImageTransition.fade(0.3)), .forceTransition])
         } else {
             posterImageView.image = nil

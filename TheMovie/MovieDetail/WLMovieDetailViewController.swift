@@ -70,15 +70,17 @@ class WLMovieDetailViewController: UIViewController {
 
 private extension WLMovieDetailViewController {
     private func configureBaseUI(movie: WLMovie) {
+        posterImageView.kf.indicatorType = .activity
+        backdropImageView.kf.indicatorType = .activity
         titleLabel.text = movie.title
-        if let posterPath = movie.posterPath {
-            posterImageView.kf.setImage(with: WLMovieImage(imagePath: posterPath).url,
+        if let posterPath = movie.posterPath, let url = URL.movieImage(path: posterPath) {
+            posterImageView.kf.setImage(with: url,
                                         options: [.transition(ImageTransition.fade(0.3)), .forceTransition])
         } else {
             posterImageView.image = nil
         }
-        if let backdropPath = movie.backdropPath {
-            backdropImageView.kf.setImage(with: WLMovieImage(imagePath: backdropPath).url,
+        if let backdropPath = movie.backdropPath, let url = URL.movieImage(path: backdropPath) {
+            backdropImageView.kf.setImage(with: url,
                                           options: [.transition(ImageTransition.fade(0.3)), .forceTransition])
         } else {
             backdropImageView.image = nil
@@ -105,8 +107,7 @@ private extension WLMovieDetailViewController {
     }
     
     @IBAction func onClickMore(_ sender: Any) {
-        guard let url = URL(string: "https://www.themoviedb.org/movie/\(movie.id)") else { return }
-        let vc = SFSafariViewController(url: url, configuration: SFSafariViewController.Configuration())
+        let vc = SFSafariViewController(url: URL.book(id: movie.id), configuration: SFSafariViewController.Configuration())
         present(vc, animated: true)
     }
 }

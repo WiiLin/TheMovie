@@ -10,7 +10,6 @@ import Alamofire
 enum WLApiPath: Equatable {
     case movieList
     case movieDetail
-    case movieImage
     
     var path: String {
         switch self {
@@ -18,8 +17,6 @@ enum WLApiPath: Equatable {
             return "/\(version)/discover/movie"
         case .movieDetail:
             return "/\(version)/movie"
-        case .movieImage:
-            return "/t/p/w500"
         }
     }
     

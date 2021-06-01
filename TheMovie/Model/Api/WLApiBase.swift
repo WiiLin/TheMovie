@@ -18,18 +18,6 @@ public class WLApiBase: NSObject {
         return decoder
     }()
     
-    static let imageBaseURLComponents: URLComponents = {
-        let url = URL(string: "https://image.tmdb.org/")!
-        var urlComponents: URLComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-        return urlComponents
-    }()
-    
-    private var baseURLComponents: URLComponents = {
-        let url = URL(string: "https://api.themoviedb.org/")!
-        var urlComponents: URLComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-        return urlComponents
-    }()
-    
     private let sessionManager: Session = {
         let session = Session.default
         session.session.configuration.timeoutIntervalForRequest = 60
@@ -43,8 +31,8 @@ extension WLApiBase {
     func request<ApiRequest: WLApi, ApiResponse: Decodable>(api: ApiRequest,
                                                             responseType: ApiResponse.Type,
                                                             completionHandler: @escaping (Result<ApiResponse, WLError>) -> Void) {
-        baseURLComponents.path = api.path
-        guard let url = baseURLComponents.url else {
+        
+        guard let url = URL.movieApi(path: api.path) else {
             completionHandler(.failure(.urlCreateError))
             return
         }
