@@ -12,3 +12,4 @@ protocol WLRequestProtocol {
     func discoverMovies(page: UInt, sort: WLMovieListApi.Sort, completionHandler: @escaping (Result<WLMovieListApi.ApiResponse, WLError>) -> Void)
     func getMovieDetail(id: Int, completionHandler: @escaping (Result<WLMovieDetailApi.ApiResponse, WLError>) -> Void)
 }
+

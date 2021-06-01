@@ -16,7 +16,7 @@ class WLMovieListViewController: UIViewController, AlertPresentable {
     // MARK: - Properties
     
     private var refreshControl: UIRefreshControl!
-    private let viewModel: WLMainViewModel = WLMainViewModel(apiCenter: WLApiCenter())
+    private let viewModel: WLMovieListViewModel = WLMovieListViewModel(apiCenter: WLApiCenter())
     
     // MARK: - Life Cycle
     

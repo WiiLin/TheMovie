@@ -12,7 +12,7 @@ public class WLApiBase: NSObject {
     // MARK: - Properties
     
     let apiKey: String = "328c283cd27bd1877d9080ccb1604c91"
-    private let jsonDecoder: JSONDecoder = {
+    private(set) var jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder

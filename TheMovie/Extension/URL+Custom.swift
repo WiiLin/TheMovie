@@ -27,11 +27,11 @@ extension URL {
         return urlComponents.url
     }
     
-    static func book(id: Int) -> URL {
+    static func book(id: Int) -> URL? {
         let url = URL.bookURLHost
         var urlComponents: URLComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
         urlComponents.path = "/movie/" + "\(id)"
-        return urlComponents.url!
+        return urlComponents.url
     }
     
     

@@ -13,7 +13,7 @@ protocol TMainViewModelDelegate: AnyObject {
     func loadMoreCompleted(indexPaths: [IndexPath])
 }
 
-class WLMainViewModel {
+class WLMovieListViewModel {
     init(apiCenter: WLRequestProtocol) {
         self.apiCenter = apiCenter
     }
@@ -80,11 +80,6 @@ class WLMainViewModel {
             }
         }
     }
-}
-
-// MARK: - Private
-
-private extension WLMainViewModel {
     func loadData(page: UInt, completionHandler: (() -> Void)?) {
         apiCenter.discoverMovies(page: page, sort: sort) { [weak self] result in
             guard let self = self else { return }

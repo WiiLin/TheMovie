@@ -107,7 +107,8 @@ private extension WLMovieDetailViewController {
     }
     
     @IBAction func onClickMore(_ sender: Any) {
-        let vc = SFSafariViewController(url: URL.book(id: movie.id), configuration: SFSafariViewController.Configuration())
+        guard let url = URL.book(id: movie.id) else { return }
+        let vc = SFSafariViewController(url: url, configuration: SFSafariViewController.Configuration())
         present(vc, animated: true)
     }
 }
