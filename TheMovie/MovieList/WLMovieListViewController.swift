@@ -1,5 +1,5 @@
 //
-//  WLMainViewController.swift
+//  WLMovieListViewController.swift
 //  TheMovie
 //
 //  Created by Wii Lin on 2021/6/1.
@@ -8,7 +8,7 @@
 
 import UIKit
 import PKHUD
-class WLMainViewController: UIViewController,AlertPresentable {
+class WLMovieListViewController: UIViewController,AlertPresentable {
     @IBOutlet private var tableView: UITableView!
     private var refreshControl: UIRefreshControl!
     private let viewModel: WLMainViewModel = WLMainViewModel(apiCenter: WLApiCenter())
@@ -25,8 +25,9 @@ class WLMainViewController: UIViewController,AlertPresentable {
 
 // MARK: - Private Method
 
-private extension WLMainViewController {
+private extension WLMovieListViewController {
     func setupSubviews() {
+        title = "Movie List"
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
         tableView.register(UINib(nibName: "\(WLMovieCell.self)", bundle: nil), forCellReuseIdentifier: "\(WLMovieCell.self)")
         setupRefreshControl()
@@ -36,7 +37,7 @@ private extension WLMainViewController {
     
     func setupRefreshControl() {
         refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(WLMainViewController.handleRefresh(_:)), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(WLMovieListViewController.handleRefresh(_:)), for: .valueChanged)
         refreshControl.tintColor = .lightGreen
         tableView.refreshControl = refreshControl
     }
@@ -64,7 +65,7 @@ private extension WLMainViewController {
 
 // MARK: - Private Action
 
-private extension WLMainViewController {
+private extension WLMovieListViewController {
     
     @objc private func handleRefresh(_ refreshControl: UIRefreshControl) {
         viewModel.refreshData()
@@ -86,7 +87,7 @@ private extension WLMainViewController {
 
 // MARK: - TableView Delegate
 
-extension WLMainViewController: UITableViewDelegate {
+extension WLMovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if viewModel.needLoadMore(indexPath: indexPath) {
             viewModel.loadNextPageData()
@@ -101,7 +102,7 @@ extension WLMainViewController: UITableViewDelegate {
 
 // MARK: - TableView Delegate
 
-extension WLMainViewController: UITableViewDataSource {
+extension WLMovieListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dataSource.count
     }
@@ -115,7 +116,7 @@ extension WLMainViewController: UITableViewDataSource {
 
 // MARK: - TableView Delegate
 
-extension WLMainViewController: TMainViewModelDelegate {
+extension WLMovieListViewController: TMainViewModelDelegate {
     func reloadCompleted() {
         tableView.reloadData()
     }
