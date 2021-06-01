@@ -59,22 +59,3 @@ enum WLError: Error {
         return NSError(domain: "", code: code, userInfo: ["code": "\(code)", "msg": description])
     }
 }
-
-extension NSError {
-    public var isCancel: Bool {
-        if NSURLErrorCancelled == code {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    public var isInternetError: Bool {
-        if NSURLErrorNotConnectedToInternet == code ||
-            NSURLErrorTimedOut == code {
-            return true
-        } else {
-            return false
-        }
-    }
-}
