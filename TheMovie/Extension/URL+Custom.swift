@@ -12,7 +12,7 @@ extension URL {
     static let apiHost: URL = URL(string: "https://api.themoviedb.org")!
     static let movieImageHost: URL = URL(string: "https://image.tmdb.org")!
     static let bookURLHost: URL = URL(string: "https://www.themoviedb.org")!
-   
+    
     static func movieApi(path: String) -> URL? {
         let url = URL.apiHost
         var urlComponents: URLComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
@@ -33,7 +33,4 @@ extension URL {
         urlComponents.path = "/movie/" + "\(id)"
         return urlComponents.url
     }
-    
-    
-    
 }

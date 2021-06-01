@@ -80,6 +80,7 @@ class WLMovieListViewModel {
             }
         }
     }
+    
     func loadData(page: UInt, completionHandler: (() -> Void)?) {
         apiCenter.discoverMovies(page: page, sort: sort) { [weak self] result in
             guard let self = self else { return }

@@ -14,7 +14,7 @@ class WLApiTest: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
@@ -27,7 +27,7 @@ class WLApiTest: XCTestCase {
         XCTAssertEqual(WLApiPath.movieList.version, apiVersion)
         XCTAssertEqual(WLApiPath.movieDetail.version, apiVersion)
     }
-
+    
     func testApi() throws {
         let testApiKey = "testApiKey"
         let testPrimaryReleaseDatelte = "2020-06-01"
@@ -49,5 +49,4 @@ class WLApiTest: XCTestCase {
         XCTAssertEqual(movieDetailApi.method, .get)
         XCTAssertEqual(movieDetailApi.path, "/\(apiVersion)/movie/\(testId)")
     }
-
 }

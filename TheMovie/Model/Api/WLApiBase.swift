@@ -31,7 +31,6 @@ extension WLApiBase {
     func request<ApiRequest: WLApi, ApiResponse: Decodable>(api: ApiRequest,
                                                             responseType: ApiResponse.Type,
                                                             completionHandler: @escaping (Result<ApiResponse, WLError>) -> Void) {
-        
         guard let url = URL.movieApi(path: api.path) else {
             completionHandler(.failure(.urlCreateError))
             return
