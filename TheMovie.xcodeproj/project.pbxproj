@@ -17,6 +17,7 @@
 		280827FD26668D8500D3B9BA /* FakeMovieDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 280827FB26668D8500D3B9BA /* FakeMovieDetail.json */; };
 		280827FF266690D100D3B9BA /* WLColorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280827FE266690D100D3B9BA /* WLColorTest.swift */; };
 		280828012666942600D3B9BA /* WLViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280828002666942600D3B9BA /* WLViewModelTest.swift */; };
+		2808280326669ED600D3B9BA /* UITableView+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808280226669ED600D3B9BA /* UITableView+Scroll.swift */; };
 		2830F9852665DEC000275E11 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2830F9842665DEC000275E11 /* Alamofire */; };
 		2830F9882665DEE700275E11 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2830F9872665DEE700275E11 /* Kingfisher */; };
 		2830F9912665DF2E00275E11 /* WLApiCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F98C2665DF2E00275E11 /* WLApiCenter.swift */; };
@@ -76,6 +77,7 @@
 		280827FB26668D8500D3B9BA /* FakeMovieDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeMovieDetail.json; sourceTree = "<group>"; };
 		280827FE266690D100D3B9BA /* WLColorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLColorTest.swift; sourceTree = "<group>"; };
 		280828002666942600D3B9BA /* WLViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLViewModelTest.swift; sourceTree = "<group>"; };
+		2808280226669ED600D3B9BA /* UITableView+Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Scroll.swift"; sourceTree = "<group>"; };
 		2830F98C2665DF2E00275E11 /* WLApiCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLApiCenter.swift; sourceTree = "<group>"; };
 		2830F98D2665DF2E00275E11 /* WLApiBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLApiBase.swift; sourceTree = "<group>"; };
 		2830F98E2665DF2E00275E11 /* WLApiPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLApiPath.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				28393502266622AE00FE38C7 /* UIStoryboard+Custom.swift */,
 				280827E926667CCB00D3B9BA /* URL+Custom.swift */,
 				280827F826668CEF00D3B9BA /* Bundle+Data.swift */,
+				2808280226669ED600D3B9BA /* UITableView+Scroll.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				28393503266622AE00FE38C7 /* UIStoryboard+Custom.swift in Sources */,
 				2830F99F2665E74F00275E11 /* WLMovieDetailApi.swift in Sources */,
 				283934FE2666218200FE38C7 /* WLMovieListViewModel.swift in Sources */,
+				2808280326669ED600D3B9BA /* UITableView+Scroll.swift in Sources */,
 				283934E6266605BD00FE38C7 /* Date+String.swift in Sources */,
 				2830F9942665DF2E00275E11 /* WLError.swift in Sources */,
 				28393501266621C700FE38C7 /* AlertPresentable.swift in Sources */,

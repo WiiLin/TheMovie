@@ -121,12 +121,15 @@ extension WLMovieListViewController: UITableViewDataSource {
 
 extension WLMovieListViewController: TMainViewModelDelegate {
     func reloadCompleted() {
-        tableView.reloadData()
+        tableView.reloadData { [weak self] in
+            guard let self = self else { return }
+            self.tableView.scroll(to: .top, animated: true)
+        }
     }
     
     func loadMoreCompleted(indexPaths: [IndexPath]) {
         tableView.beginUpdates()
-        tableView.insertRows(at: indexPaths, with: .automatic)
+        tableView.insertRows(at: indexPaths, with: .bottom)
         tableView.endUpdates()
     }
 }
